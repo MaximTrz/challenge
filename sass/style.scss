@@ -1,0 +1,73 @@
+@import 'colors.scss';
+@import 'reset.scss';
+
+.postcard-container{
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-postcard{
+		overflow: hidden;
+		position: relative;
+		height: 400px;
+		width:  600px;
+		background: #414141 url(../img/bgc.jpg) center no-repeat;
+		background-size: cover;
+		z-index: 5;
+		display: flex;
+		align-items: center;
+		&::before{
+			content: '';
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: #333660 url(../img/overlay/overlay.png) center no-repeat;
+			background-size: cover;
+			opacity: 0.27;
+			z-index: -1;
+		}
+
+			&__text{
+				font-size: 82px;
+				padding-left: 30px;
+				font-family: "Impact";
+				color: rgb(255, 255, 255);
+				line-height: 1.2;
+				text-align: left;
+				width: 60%;
+			}
+			&-image{
+				width: 40%;
+				align-self: flex-end;
+				transform: translateX(-10px);
+				
+				&__artem{
+					width: 365px;
+					height: auto;
+					transform: translateY(150px);
+					filter: drop-shadow(-20px 0px 5px #000);
+
+					
+				}
+				&__cap{
+					position: relative;
+					transform: translateY(-180px);
+					filter: drop-shadow(-20px 0px 5px #000);
+					width: 190px;
+					height: auto;
+					margin-left:42px;	
+
+
+				}
+						
+
+			}
+		
+
+	}
+}
+
